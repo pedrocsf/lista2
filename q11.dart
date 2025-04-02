@@ -1,12 +1,24 @@
 import 'dart:io';
 
 void main() {
-  List<double> numeros = stdin.readLineSync()!
-      .split(' ')
-      .map((e) => double.parse(e))
-      .toList();
+  bool j = true;
+  int i = 0;
+  List<double> numeros = [];
 
+  while (j) {
+    String? numero = stdin.readLineSync();
+    numeros.add(double.parse(numero!));
+    i++;
+    if (i == 3) {
+      j = false;
+    }
+  }
+  
   numeros.sort();
-
-  print(numeros.map((n) => n.toStringAsFixed(2)).join(", "));
+  List<String> partes = [];
+  for (int i = 0; i < numeros.length; i++) {
+    partes.add(numeros[i].toStringAsFixed(2));
+  }
+  String resultado = partes.join(", ");
+  print(resultado);
 }

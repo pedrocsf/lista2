@@ -25,16 +25,16 @@ void main() {
   }
 
   List<String> partes = [];
-  if (milhares > 0) partes.add("$milhares milhar${milhares > 1 ? 'es' : ''}");
-  if (centenas > 0) partes.add("$centenas centena${centenas > 1 ? 's' : ''}");
-  if (dezenas > 0) partes.add("$dezenas dezena${dezenas > 1 ? 's' : ''}");
-  if (unidades > 0) partes.add("$unidades unidade${unidades > 1 ? 's' : ''}");
+    if (milhares > 0) partes.add("$milhares milhar${milhares > 1 ? 'es' : ''}");
+    if (centenas > 0) partes.add("$centenas centena${centenas > 1 ? 's' : ''}");
+    if (dezenas > 0) partes.add("$dezenas dezena${dezenas > 1 ? 's' : ''}");
+    if (unidades > 0) partes.add("$unidades unidade${unidades > 1 ? 's' : ''}");
 
   List<String> valores = [];
-  if (milhares > 0) valores.add("${milhares * 1000}");
-  if (centenas > 0) valores.add("${centenas * 100}");
-  if (dezenas > 0) valores.add("${dezenas * 10}");
-  if (unidades > 0) valores.add("$unidades");
+    if (milhares > 0) valores.add("${milhares * 1000}");
+    if (centenas > 0) valores.add("${centenas * 100}");
+    if (dezenas > 0) valores.add("${dezenas * 10}");
+    if (unidades > 0) valores.add("$unidades");
 
   print("($ordem) $numero = ${partes.join(" + ")} = ${valores.join(" + ")}");
 }
